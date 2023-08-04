@@ -1,0 +1,44 @@
+timestamp;class_name;function_name;args;return_val
+2023-08-04 23:48:15;VirtualDummyInstrument;set_x;10;null
+2023-08-04 23:48:15;VirtualDummyInstrument;set_y;10;null
+2023-08-04 23:48:17;VirtualDummyInstrument;get_z;null;[10, 0.10132128847693933]
+2023-08-04 23:48:17;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:19;VirtualDummyInstrument;get_z;null;[10, 0.04651809412657426]
+2023-08-04 23:48:19;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:21;VirtualDummyInstrument;get_z;null;[10, 0.7474680915887582]
+2023-08-04 23:48:21;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:23;VirtualDummyInstrument;get_z;null;[10, 0.22664155963700583]
+2023-08-04 23:48:23;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:25;VirtualDummyInstrument;get_z;null;[10, 0.48072567065025273]
+2023-08-04 23:48:25;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:27;VirtualDummyInstrument;get_z;null;[10, 0.7191585491593926]
+2023-08-04 23:48:27;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:29;VirtualDummyInstrument;get_z;null;[10, 0.24595391280575285]
+2023-08-04 23:48:29;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:31;VirtualDummyInstrument;get_z;null;[10, 0.31089332200928455]
+2023-08-04 23:48:31;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:33;VirtualDummyInstrument;get_z;null;[10, 0.6523965841831426]
+2023-08-04 23:48:33;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:35;VirtualDummyInstrument;get_z;null;[10, 0.7191298407755974]
+2023-08-04 23:48:35;VirtualDummyInstrument;get_w;null;{"A": 10, "B": 10}
+2023-08-04 23:48:37;VirtualDummyInstrument;set_x;20;null
+2023-08-04 23:48:39;VirtualDummyInstrument;get_z;null;[20, 0.9456702611670962]
+2023-08-04 23:48:39;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:41;VirtualDummyInstrument;get_z;null;[20, 0.6153760120489546]
+2023-08-04 23:48:41;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:43;VirtualDummyInstrument;get_z;null;[20, 0.10102877804141075]
+2023-08-04 23:48:43;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:45;VirtualDummyInstrument;get_z;null;[20, 0.9441011693574918]
+2023-08-04 23:48:45;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:47;VirtualDummyInstrument;get_z;null;[20, 0.16175432109362375]
+2023-08-04 23:48:47;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:49;VirtualDummyInstrument;get_z;null;[20, 0.029973845194844584]
+2023-08-04 23:48:49;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:51;VirtualDummyInstrument;get_z;null;[20, 0.5745467136481569]
+2023-08-04 23:48:51;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:53;VirtualDummyInstrument;get_z;null;[20, 0.5323977629806085]
+2023-08-04 23:48:53;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:55;VirtualDummyInstrument;get_z;null;[20, 0.7927852636861946]
+2023-08-04 23:48:55;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}
+2023-08-04 23:48:57;VirtualDummyInstrument;get_z;null;[20, 0.5959315615189047]
+2023-08-04 23:48:57;VirtualDummyInstrument;get_w;null;{"A": 20, "B": 10}

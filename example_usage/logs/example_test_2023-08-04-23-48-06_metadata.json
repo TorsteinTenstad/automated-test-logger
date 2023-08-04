@@ -1,0 +1,10 @@
+{
+  "test_start": "2023-08-04 23:48:06",
+  "git-hash": "e0aa007111f237ae6fbec4e4aec0013a367084ad",
+  "git-url": "https://github.com/TorsteinTenstad/automated-test-logger.git",
+  "dirty": true,
+  "spec_filename": "example_usage\\example_test_spec.md",
+  "log_data_filename": "example_usage\\logs\\example_test_2023-08-04-23-48-06_data.csv",
+  "log_metadata_filename": "example_usage\\logs\\example_test_2023-08-04-23-48-06_metadata.json",
+  "test_instance_notes": "Some notes\n\n:)"
+}
