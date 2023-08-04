@@ -98,6 +98,7 @@ class AutomatedTestLogger:
 
 
 def use_automated_test_logger(f):
+    '''Decorator usable on member functions of classes with a AutomatedTestLogger named `_automated_test_logger`'''
     @functools.wraps(f)
     def wrapper(*args, **kwargs):
         return_val = f(*args, **kwargs)
@@ -109,7 +110,8 @@ def use_automated_test_logger(f):
         else:  
             _self = args[0]
             log_args = args[1:] if len(args) > 2 else args[1] if len(args) > 1 else None
-
-        _self._automated_test_logger.log(_self.__class__.__name__, f.__name__, log_args, return_val)
+        assert hasattr(_self, '_automated_test_logger'), "Decorator not usable, see docstring"  # To prevent silent errors when using the decorator, but not having a correctly named logger
+        if _self._automated_test_logger is not None:  # To enable classes to disable logging on the instance-level, the logger is allowed to be None
+            _self._automated_test_logger.log(_self.__class__.__name__, f.__name__, log_args, return_val)
         return return_val
     return wrapper
