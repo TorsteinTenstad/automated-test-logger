@@ -2,7 +2,7 @@ import json
 
 
 class FileBackedDict:
-    def __init__(self, filename, data = {}):
+    def __init__(self, filename, data={}):
         self._filename = filename
         self._data = data
         self._write_to_file()

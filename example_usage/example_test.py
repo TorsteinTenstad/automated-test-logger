@@ -3,6 +3,7 @@ import time
 
 from automated_test_logger import AutomatedTestLogger, use_automated_test_logger
 
+
 class VirtualDummyInstrument:
     def __init__(self, logger: AutomatedTestLogger = None):
         self._automated_test_logger = logger
@@ -18,7 +19,7 @@ class VirtualDummyInstrument:
     @use_automated_test_logger
     def get_z(self):
         return (self._x, random.random())
-    
+
     @use_automated_test_logger
     def get_w(self):
         return {'A': self._x, 'B': self._y}
@@ -34,7 +35,7 @@ if __name__ == '__main__':
         time.sleep(2)
         inst.get_z()
         inst.get_w()
-    
+
     time.sleep(2)
     inst.set_x(20)
     for i in range(10):

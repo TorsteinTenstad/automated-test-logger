@@ -48,7 +48,7 @@ class AutomatedTestLogger:
             [test_name_including_procedure_id, get_time_str_for_filename(), self.LOG_METADATA_FILE_SUFFIX]))
         self._log_data_path = log_dir_path.joinpath((self.FILENAME_DELIMITER).join(
             [test_name_including_procedure_id, get_time_str_for_filename(), self.LOG_DATA_FILE_SUFFIX]))
-        
+
         spec_file_pattern = f'{test_name}{self.FILENAME_DELIMITER}{self.SPEC_FILE_SUFFIX}'
         spec_files = list(test_dir.glob(spec_file_pattern))
         spec_files_names_str = '\n\t'.join([str(x) for x in spec_files])
@@ -64,7 +64,8 @@ class AutomatedTestLogger:
             'spec_filename': spec_filename,
             'log_data_filename': str(self._log_data_path),
             'log_metadata_filename': str(log_metadata_filename),
-            'test_instance_notes': ui.prompt_for_test_instance_notes()}
+            'test_instance_notes': ui.prompt_for_test_instance_notes(),
+        }
 
         self._metadata = FileBackedDict(log_metadata_filename, metadata)
 
@@ -72,10 +73,8 @@ class AutomatedTestLogger:
             line = self.CSV_DELIMITER.join(self.CSV_COLUMNS)
             f.write(line + '\n')
 
-
     def __setitem__(self, key, value):
         self._metadata[key] = value
-
 
     def log(self, class_name, function_name, args, return_val):
         def adaptive_json_dumps(obj):
@@ -107,11 +106,13 @@ def use_automated_test_logger(f):
             kwargs.update(zip(f.__code__.co_varnames, args))
             _self = kwargs.pop('self')
             log_args = kwargs
-        else:  
+        else:
             _self = args[0]
             log_args = args[1:] if len(args) > 2 else args[1] if len(args) > 1 else None
-        assert hasattr(_self, '_automated_test_logger'), "Decorator not usable, see docstring"  # To prevent silent errors when using the decorator, but not having a correctly named logger
-        if _self._automated_test_logger is not None:  # To enable classes to disable logging on the instance-level, the logger is allowed to be None
+
+        # To prevent silent errors when using the decorator, we assert that the attribute exists, but allow it to be None. The latter is to enable classes to disable logging on the instance-level.
+        assert hasattr(_self, '_automated_test_logger'), "Decorator not usable, see docstring"
+        if _self._automated_test_logger is not None:
             _self._automated_test_logger.log(_self.__class__.__name__, f.__name__, log_args, return_val)
         return return_val
     return wrapper
